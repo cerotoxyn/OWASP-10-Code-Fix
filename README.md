@@ -37,6 +37,9 @@ This route returns any user profile based only on the userId in the URL. There i
 How the Fix Improves Security
 The secure version checks whether the requester is authenticated and whether they are authorized to view the requested profile. Only the account owner or an administrator can access the data. This prevents attackers from changing the ID in the URL to retrieve other users' information.
 
+References:
+
+
 ## 2. Broken Access Control (Python/Flask)
 
 ### Vulnerable Code:
@@ -175,3 +178,30 @@ This is an Identification and Authentication Failures issue because the authenti
 
 How the Fix Improves Security
 The secure version verifies the entered password against a bcrypt hash instead of comparing plaintext values. This means the real password is never stored directly. If the database is leaked, attackers still have to crack strong password hashes rather than instantly seeing user passwords.
+
+
+
+### References (Links)
+
+## Broken Access Control
+1. https://owasp.org/www-community/Broken_Access_Control
+2. https://owasp.org/www-community/Access_Control
+
+## Cryptographic Failures
+1. https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/
+2. https://owasp.org/www-project-mobile-top-10/2023-risks/m10-insufficient-cryptography
+
+## Injection
+1. https://owasp.org/Top10/2025/A05_2025-Injection/
+
+## Insecure Design
+1. https://owasp.org/Top10/2025/A06_2025-Insecure_Design/
+
+## Identification/Authentication Failures
+1. https://owasp.org/Top10/2021/A07_2021-Identification_and_Authentication_Failures/
+
+## Software/Data Integrity Failures
+1.https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/
+
+## Server Side Request Forgery
+1. https://owasp.org/www-community/attacks/Server_Side_Request_Forgery
